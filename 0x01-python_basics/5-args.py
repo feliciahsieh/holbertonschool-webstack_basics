@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" 5-args.py - print command line arguments
+"""
 
 import sys
 

@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" 4-add.py - adds 2 numbers. File is imported in from main()
+"""
 
 from add_4 import add
 
