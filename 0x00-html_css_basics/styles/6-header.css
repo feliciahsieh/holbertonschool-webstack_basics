@@ -1,0 +1,94 @@
+/* 6-header.css */
+header {
+    background-color: #D32323;
+    height: 60px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.container {
+    background-color: #FFFFFF;
+    height: 50px;
+    /*width: 95%;*/
+    max-width: 1000px;
+    list-style-type: none;
+    padding: 0px;
+    margin: auto;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.logo {
+    background-color: #0000FF;
+    background-image: url("https://s3.amazonaws.com/intranet-projects-files/holbertonschool-webstack/320/logo.jpg");
+    background-size: 100%;
+    height: 100%;
+    width: 120px;
+    position: absolute;
+    left: 0px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.search {
+    background-color: #FEFEFE;
+    border: #CCCCCC solid 1px;
+    border-radius: 4px;
+    position: absolute;
+    height: 40px;
+    left: 140px;
+    right: 220px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.user {
+    background: none;
+    height: 100%;
+    width: 200px;
+    float: right;
+}
+
+.find {
+    background: none;
+    height: 100%;
+    width: 44%;
+}
+
+.location {
+    background: none;
+    height: 100%;
+    width: 44%;
+}
+
+.action {
+    background: none;
+    height: 100%;
+    width: 10%;
+}
+
+label {
+    border-left: #CCCCCC solid 1px;
+    padding: 0px 10px;
+    font-weight: 600;
+    font-size: 16px;
+    margin: auto;
+}
+
+input {
+    padding: 0px 10px;
+    border: none;
+    font-size: 14px;
+    margin: auto;
+}
+
+button {
+    border-radius: 4px;
+    font-size: 30px;
+}

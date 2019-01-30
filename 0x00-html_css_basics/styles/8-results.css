@@ -1,0 +1,25 @@
+/* 8-results.css */
+#container {
+    max-width: 1000px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    flex: 1 0 calc(33% - 20px);
+}
+
+article {
+    width: 300px;
+    background-color: #FFFFFF;
+    position: relative;
+    min-height: 110px;
+    margin: 10px;
+    border: #CCCCCC solid 1px;
+    border-radius: 10px;
+    display: inline-block;
+}

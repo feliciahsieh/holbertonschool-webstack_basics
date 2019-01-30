@@ -1,0 +1,27 @@
+/* 2-header.css */
+header {
+    background-color: #FF0000;
+    height: 60px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.container {
+    background-color: #00FF00;
+    height: 50px;
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.logo {
+    background-color: #0000FF;
+    height: 100%;
+    width: 120px;
+    /*margin: 0;*/
+    /*padding: 0;*/
+}
