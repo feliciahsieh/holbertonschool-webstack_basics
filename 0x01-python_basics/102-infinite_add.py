@@ -5,7 +5,7 @@ import sys
 
 
 if __name__ == "__main__":
-   # stuff only to run when not called via 'import' here
+    # stuff only to run when not called via 'import' here
 
     if len(sys.argv) < 2:
         print("0")
