@@ -22,7 +22,11 @@ class Square:
         self.__size = value
 
     def __init__(self, size=0):
-        """ __init__ - initialize square class """
+        """ __init__ - initialize square class
+        Arguments:
+        size: integer size of Square object
+        Returns: N/A
+        """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -30,11 +34,17 @@ class Square:
         self.__size = size
 
     def area(self):
-        """ area - returns area of Square object """
+        """ area - returns area of Square object
+        Arguments: N/A
+        Returns: area of square object
+        """
         return self.size * self.size
 
     def my_print(self):
-        """ my_print - print a square using Square object """
+        """ my_print - print a square using Square object
+        Arguments: N/A
+        Returns: N/A
+        """
         if self.__size != 0:
             for r in range(self.__size):
                 print("#" * self.__size, end="\n")
