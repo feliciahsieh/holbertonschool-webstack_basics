@@ -3,7 +3,7 @@
 """
 
 
-class Square():
+class Square:
     """ class: Square - object to help print a square to output """
 
     @property
