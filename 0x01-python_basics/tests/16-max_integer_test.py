@@ -42,6 +42,30 @@ class TestMaxInteger(unittest.TestCase):
         """"""
         self.assertEqual(max_integer([0, 0, 0, 0]), 0)
 
+    def testInputEmptyList(self):
+        """"""
+        self.assertEqual(max_integer([]), None)
+
+    def testInputEmptySet(self):
+        """"""
+        self.assertEqual(max_integer({}), None)
+
+    def testInputTuple(self):
+        """"""
+        self.assertEqual(max_integer((3, 3)), 3)
+
+    def testInputInteger(self):
+        """"""
+        self.assertRaises(TypeError, max_integer, 5)
+
+    def testInputFloat(self):
+        """"""
+        self.assertRaises(TypeError, max_integer, 9.99)
+
+    def testInputString(self):
+        """"""
+        self.assertEqual(max_integer("hello"), 'o')
+
 
 if __name__ == '__main__':
     unittest.main()
