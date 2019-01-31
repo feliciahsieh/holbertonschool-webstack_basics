@@ -2,6 +2,7 @@
 """ 10-simple_delete.py - delete a dictionary entry with given key
 """
 
+
 def simple_delete(my_dict, key=""):
     """
     simple_delete() - delete a dictionary entry with given key
