@@ -14,4 +14,4 @@ def print_diagonal(n):
         print("\n")
     elif n > 0:
         for i in range(0, n):
-            print("{}\\".format(" " * i))
+            print("{}\\".format(" " * i), end="\n")
