@@ -9,11 +9,15 @@ def weight_average(my_list=[]):
     my_list: list of tuples
     Returns: weighted average
     """
-    sum = 0
-    denom = 0
 
-    for i in my_list:
-        sum += i[0] * i[1]
-        denom += i[1]
+    if my_list == []:
+        return 0
+    else:
+        sum = 0
+        denom = 0
 
-    return sum / denom
+        for i in my_list:
+            sum += i[0] * i[1]
+            denom += i[1]
+
+        return sum / denom
