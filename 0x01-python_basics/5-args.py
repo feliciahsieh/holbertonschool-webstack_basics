@@ -13,3 +13,6 @@ else:
     print("{} arguments:".format(n))
     for i in range(1, n + 1):
         print("{}: {}".format(i, sys.argv[i]))
+
+if __name__ == "__main__":
+    # run when run as main program (not called in an 'import')
