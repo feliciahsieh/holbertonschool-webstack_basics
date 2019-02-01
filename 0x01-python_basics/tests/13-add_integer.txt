@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+""""""
+
+
+The ``13-add_integer(a, b)`` module
+======================
+
+Using ``addition with 2 integers``
+-------------------
+
+This is an example text file in reStructuredText format. First import
+``add_integer`` from the ``13-add_integer`` module:
+
+    >>> add_integer = __import__('13-add_integer').add_integer
+
+"""Test: Working scenarios"""
+    >>> print(add_integer(0, 0))
+    0
+
+    >>> print(add_integer(-0, -0))
+    0
+
+    >>> print(add_integer(1, 7))
+    8
