@@ -5,7 +5,7 @@ if (process.argv.length === 2) {
   console.log(1);
 } else {
   let max = parseInt(process.argv[2]);
-  let secondMax = -1;
+  let secondMax = Number.MIN_SAFE_INTEGER;
 
   for (let i = 3; i <= process.argv.length; i++) {
     if (max <= parseInt(process.argv[i])) {
