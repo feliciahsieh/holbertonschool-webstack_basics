@@ -1,14 +1,16 @@
 #!/usr/bin/node
 let dict = require('./101-data.js').dict;
 let sorted = {};
-// temp = [];
+let temp = [];
 
-for (var key in dict) {
-  sorted[dict[key]] = key;
-  // let temp = dict.map(item => map.id);
-  // console.log(temp)
-  // sorted[dict[key]] = temp.push(key);
+for (let key in dict) {
+  if (sorted[dict[key]]) {
+    sorted[dict[key]].push(key);
+  } else {
+    temp.push(key);
+    sorted[dict[key]] = temp;
+    temp = [];
+  }
 }
 
-console.log(dict);
 console.log(sorted);
