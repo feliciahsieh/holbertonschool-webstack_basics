@@ -1,15 +1,16 @@
-#!/usr/bin/nodejs
-const Square = require('./109-square').Square;
+#!/usr/bin/node
+const parentSquare = require('./109-square').Square;
 
 exports.Square = function Square (size) {
-  Square.prototype.charPrint = function (c) {
-    if (isNaN(c)) {
-      c = 'X';
-    }
+  parentSquare.call(this, size);
+};
 
-    console.log('**c: ', c);
-    for (let i = 0; i < this.size; i++) {
-      console.log(c.repeat(this.size));
-    }
-  };
+exports.Square.prototype.charPrint = function (c) {
+  if (typeof c === 'undefined') {
+    c = 'X';
+  }
+
+  for (let i = 0; i < this.height; i++) {
+    console.log(c.repeat(this.width));
+  }
 };
