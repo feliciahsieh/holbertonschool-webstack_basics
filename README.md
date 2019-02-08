@@ -1,15 +1,14 @@
-< align="center"><img src="FullStackDeveloper.jpg" width="300"></p>
+<p align="center"><img src="FullStackDeveloper.jpg" width="300"></p>
 
 # Webstack Basics
 
 ## Welcome
-Here are my webstack skills on display.
+Here are my full stack software engineering (webstack) skills on display.
 
 ## Table of Contents
 * [About](#about)
 * [Requirements](#requirements)
 * [Installation](#installation)
-* [Usage](#usage)
 * [Projects](#projects)
 * [Credits](#credits)
 
@@ -37,10 +36,6 @@ git clone https://github.com/feliciahsieh/holbertonschool-webstack_basics.git
 1. [0x00-html_css_basics](./0x00-html_css_basics)
 2. [0x01-python_basics](./0x01-python_basics)
 3. [0x02-javascript_basics](./0x02-javascript_basics)
-
-## Usage
-```
-```
 
 ## Credits
 Work is owned and maintained by Felicia Hsieh ([@feliciahsiehsw](https://twitter.com/feliciahsiehsw)).
