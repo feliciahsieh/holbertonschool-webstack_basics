@@ -12,7 +12,7 @@ exports.Rectangle = function Rectangle (w, h) {
   };
 
   Rectangle.prototype.rotate = function () {
-    temp = this.width;
+    let temp = this.width;
     this.width = this.height;
     this.height = temp;
   };
@@ -21,5 +21,4 @@ exports.Rectangle = function Rectangle (w, h) {
     this.width *= 2;
     this.height *= 2;
   };
-
 };

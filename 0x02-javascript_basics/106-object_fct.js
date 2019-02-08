@@ -6,7 +6,7 @@ let myObject = {
 console.log(myObject);
 
 Object.prototype.incr = function () {
-  this.value++;
+  this.value += 1;
 }
 myObject.incr = incr;
 
