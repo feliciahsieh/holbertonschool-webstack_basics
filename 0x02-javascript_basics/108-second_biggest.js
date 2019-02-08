@@ -2,7 +2,7 @@
 if (process.argv.length === 2) {
   console.log(0);
 } else if (process.argv.length === 3) {
-  console.log(1);
+  console.log(0);
 } else {
   let max = parseInt(process.argv[2]);
   let secondMax = Number.MIN_SAFE_INTEGER;
