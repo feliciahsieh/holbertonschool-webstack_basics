@@ -1,5 +1,5 @@
 #!/usr/bin/node
-var fs = require('fs');
+let fs = require('fs');
 
 fs.readFile(process.argv[2], 'utf8', function (err1, data1) {
   if (err1) {
