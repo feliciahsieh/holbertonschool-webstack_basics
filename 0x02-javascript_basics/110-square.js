@@ -1,13 +1,15 @@
-#!/usr/bin/node
-const Rectangle = require('./109-square').Square
+#!/usr/bin/nodejs
+const Square = require('./109-square').Square;
 
-class Square extends Square {
-  Square.prototype.charPrint(c) = function () {
-     if isNaN(c) {
+exports.Square = function Square (size) {
+  Square.prototype.charPrint = function (c) {
+    if (isNaN(c)) {
       c = 'X';
     }
-    for(let i=0;i<this.size;i++) {
+
+    console.log('**c: ', c);
+    for (let i = 0; i < this.size; i++) {
       console.log(c.repeat(this.size));
     }
-  }
-}
+  };
+};
