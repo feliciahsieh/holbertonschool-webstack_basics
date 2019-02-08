@@ -5,10 +5,10 @@ let myObject = {
 };
 console.log(myObject);
 
-Object.prototype.incr = function () {
+this.incr = function () {
   this.value += 1;
-}
-myObject.incr = incr;
+};
+myObject.incr = this.incr;
 
 myObject.incr();
 console.log(myObject);
