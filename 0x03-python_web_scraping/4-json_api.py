@@ -1,5 +1,5 @@
-#!/usr/bin/python3                                                                                                           
-""" 4-json_api.py - sends user input in a POST request and receives JSON data """
+#!/usr/bin/python3
+""" 4-json_api.py - send user input in a POST request & receives JSON data """
 
 if __name__ == "__main__":
 
@@ -12,7 +12,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 1:
         params['q'] = ''
     elif len(sys.argv) == 2:
-        params = {'q': sys.argv[1] }
+        params = {'q': sys.argv[1]}
     else:
         print("Usage: [URL] | [URL] [POST value]")
         sys.exit(0)
@@ -27,9 +27,8 @@ if __name__ == "__main__":
         if r.status_code == 200:  # Valid JSON
             print("[{}] {}".format(resp['id'], resp['name']))
         elif r.status_code == 204:  # Empty JSON
-        # elif len(r) == 0:  # Empty JSON
             print("No result")
         else:  # Invalid JSON
             print("Not a valid JSON")
-    except:
+    except Exception as e:
         print("Not a valid JSON")
