@@ -21,6 +21,7 @@ This repository contains various projects while learning the language for the fi
 * SCSS / Sass 3.2.12 (Media Mark)
 * pip3 (1.5.4 from /usr/lib/python3/dist-packages (python 3.4))
 * nodejs 6.16.0
+* requests 2.2.1
 * pycodestyle 2.4.0 (linter - python)
 * semistandard 12.0.0 (linter - javascript)
 * betty 1.0 (linter - C)
@@ -36,6 +37,7 @@ git clone https://github.com/feliciahsieh/holbertonschool-webstack_basics.git
 1. [0x00-html_css_basics](./0x00-html_css_basics)
 2. [0x01-python_basics](./0x01-python_basics)
 3. [0x02-javascript_basics](./0x02-javascript_basics)
+4. [0x03-python_web_scraping](./0x03-python_web_scraping)
 
 ## Credits
 Work is owned and maintained by Felicia Hsieh ([@feliciahsiehsw](https://twitter.com/feliciahsiehsw)).
