@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 100-starwars.py - query API for character appearance in starwars movies """
+""" 100-starwars.py - query API for people appearances in starwars movies """
 
 if __name__ == "__main__":
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
                 print("{}".format(result['name']))
                 for movieURL in result['films']:
                     movieRequest = get(movieURL).json()
-                    print("    {}".format(movieRequest['title']))
+                    print("\t{}".format(movieRequest['title']))
             if cnt < r['count']:
                 url = r['next']
                 r = get(url).json()
