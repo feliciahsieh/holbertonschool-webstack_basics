@@ -3,27 +3,26 @@
 
 if __name__ == "__main__":
 
-    import requests
-    import sys
+    from requests import get
+    from sys import argv
 
-    if len(sys.argv) == 2:
+    if len(argv) == 2:
         ppl = []
         cnt = 0
         baseurl = "https://swapi.co/api/people/?search="
-        url = baseurl + sys.argv[1]
+        url = baseurl + argv[1]
 
-        r = requests.get(url).json()
+        r = get(url).json()
         print("Number of results: {}".format(r['count']))
         while cnt < r['count']:
             for result in r['results']:
                 cnt += 1
                 print("{}".format(result['name']))
                 for movieURL in result['films']:
-                    #print("movie: {}".format(movieURL))
-                    movieRequest = requests.get(movieURL).json()
+                    movieRequest = get(movieURL).json()
                     print("    {}".format(movieRequest['title']))
             if cnt < r['count']:
                 url = r['next']
-                r = requests.get(url).json()
+                r = get(url).json()
     else:
         print("Usage: ./8-starwars.py [search string]")
