@@ -10,7 +10,7 @@ if __name__ == "__main__":
         url = sys.argv[1]
         try:
             r = requests.get(url)
-            print("{}".format(r.headers['X-Request-Id']))
+            print("{}".format(r.headers['x-request-id']))
         except Exception as e:
             print('******Error: ', e)
     else:
