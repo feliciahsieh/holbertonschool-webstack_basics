@@ -9,5 +9,5 @@ if __name__ == "__main__":
     r = requests.get(url)
 
     print("Body response:")
-    print("    - type: {}".format(type(r.text)))
-    print("    - content: {}".format(r.text))
+    print("- type: {}".format(type(r.text)))
+    print("- content: {}".format(r.text))
