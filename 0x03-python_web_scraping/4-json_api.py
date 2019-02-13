@@ -17,13 +17,14 @@ if __name__ == "__main__":
         print("Usage: [URL] | [URL] [POST value]")
         sys.exit(0)
 
-    # print("my params: {}".format(params))
-
-    r = requests.post(url, data=params)
+    try:
+        r = requests.post(url, data=params)
+    except Exception as e:
+        print("No result")
+        sys.exit(0)
 
     try:
         resp = r.json()
-        # print("my status code: {}".format(r.status_code))
         if r.status_code == 200:  # Valid JSON
             print("[{}] {}".format(resp['id'], resp['name']))
         elif r.status_code == 204:  # Empty JSON
