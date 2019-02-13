@@ -3,14 +3,14 @@
 
 if __name__ == "__main__":
 
-    import requests
-    import sys
+    from requests import get
+    from sys import argv
 
-    if len(sys.argv) == 2:
-        url = sys.argv[1]
+    if len(argv) == 2:
+        url = argv[1]
         try:
-            r = requests.get(url)
-            print("{}".format(r.headers['x-request-id']))
+            r = get(url)
+            print("{}".format(r.headers.get('x-request-id')))
         except Exception as e:
             print('******Error: ', e)
     else:
