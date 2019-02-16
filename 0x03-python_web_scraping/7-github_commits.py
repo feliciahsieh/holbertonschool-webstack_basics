@@ -18,6 +18,6 @@ if __name__ == "__main__":
                 print("{}: {}".format(
                     rjson[i]['sha'], rjson[i]['commit']['author']['name']))
         except Exception as e:
-            sys.stderr.write(str(e) + "\n")
+            print(e)
     else:
         print("Usage: ./7-github_commits.py [username] [repo name]")
