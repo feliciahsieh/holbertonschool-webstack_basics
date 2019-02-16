@@ -5,16 +5,12 @@ import sys
 
 if __name__ == "__main__":
 
-    if len(sys.argv) == 3:
-        baseurl = "https://api.github.com/repos/"
-        nameRepo = sys.argv[1]
-        nameUser = sys.argv[2]
+    baseurl = "https://api.github.com/repos/"
+    nameRepo = sys.argv[1]
+    nameUser = sys.argv[2]
 
-        url = baseurl + nameUser + '/' + nameRepo + '/commits'
-        r = requests.get(url)
-        rjson = r.json()
-        for i in range(10):
-            print("{}: {}".format(
-                rjson[i]['sha'], rjson[i]['commit']['author']['name']))
-    else:
-        print("Usage: ./7-github_commits.py [username] [repo name]")
+    url = baseurl + nameUser + '/' + nameRepo + '/commits'
+    r = requests.get(url).json()
+    for i in range(10):
+        print("{}: {}".format(
+            r[i]['sha'], r[i]['commit']['author']['name']))
