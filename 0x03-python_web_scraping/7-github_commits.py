@@ -13,11 +13,8 @@ if __name__ == "__main__":
         url = baseurl + nameUser + '/' + nameRepo + '/commits'
         r = requests.get(url)
         rjson = r.json()
-        try:
-            for i in range(10):
-                print("{}: {}".format(
-                    rjson[i]['sha'], rjson[i]['commit']['author']['name']))
-        except Exception as e:
-            print(e)
+        for i in range(10):
+            print("{}: {}".format(
+                rjson[i]['sha'], rjson[i]['commit']['author']['name']))
     else:
         print("Usage: ./7-github_commits.py [username] [repo name]")
