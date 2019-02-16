@@ -10,26 +10,22 @@ if __name__ == "__main__":
     params = {}
 
     if len(sys.argv) == 1:
-        params['q'] = ''
-    elif len(sys.argv) == 2:
+        params['q'] = ""
+    elif len(sys.argv) == 2 and len(sys.argv[1]) == 1:
         params = {'q': sys.argv[1]}
     else:
-        print("Usage: [URL] | [URL] [POST value]")
+        print("Usage: ./4-json_api.py [character]")
         sys.exit(0)
 
     try:
         r = requests.post(url, data=params)
-    except Exception as e:
-        print("No result")
-        sys.exit(0)
-
-    try:
         resp = r.json()
+        if resp == {}:
+            print("No result")
+            sys.exit(0)
         if r.status_code == 200:  # Valid JSON
             print("[{}] {}".format(resp['id'], resp['name']))
-        elif r.status_code == 204:  # Empty JSON
-            print("No result")
         else:  # Invalid JSON
             print("Not a valid JSON")
     except Exception as e:
-        print("Not a valid JSON")
+            print("Not a valid JSON")
