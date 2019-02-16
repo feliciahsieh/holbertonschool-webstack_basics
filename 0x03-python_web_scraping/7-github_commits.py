@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ 7-github_commits.py - print user's last 10 Github commits """
-
 import requests
 import sys
 
@@ -19,6 +18,6 @@ if __name__ == "__main__":
                 print("{}: {}".format(
                     rjson[i]['sha'], rjson[i]['commit']['author']['name']))
         except Exception as e:
-            print('Not found')
+            sys.stderr.write(str(e) + "\n")
     else:
         print("Usage: ./7-github_commits.py [username] [repo name]")
