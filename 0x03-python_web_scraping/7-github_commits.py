@@ -10,7 +10,10 @@ if __name__ == "__main__":
     nameUser = sys.argv[2]
 
     url = baseurl + nameUser + '/' + nameRepo + '/commits'
-    r = requests.get(url).json()
-    for i in range(10):
-        print("{}: {}".format(
-            r[i]['sha'], r[i]['commit']['author']['name']))
+    try:
+        r = requests.get(url).json()
+        for i in range(10):
+            print("{}: {}".format(
+                r[i]['sha'], r[i]['commit']['author']['name']))
+    except Exception as e:
+        pass
