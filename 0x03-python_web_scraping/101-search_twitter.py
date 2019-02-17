@@ -6,11 +6,11 @@ from requests import get, post
 from sys import argv
 
 """
-$ curl --request GET 
- --url 'https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=popular' 
- --header 'authorization: OAuth oauth_consumer_key="consumer-key-for-app", 
- oauth_nonce="generated-nonce", oauth_signature="generated-signature", 
- oauth_signature_method="HMAC-SHA1", oauth_timestamp="generated-timestamp", 
+$ curl --request GET
+ --url 'https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=popular'
+ --header 'authorization: OAuth oauth_consumer_key="consumer-key-for-app",
+ oauth_nonce="generated-nonce", oauth_signature="generated-signature",
+ oauth_signature_method="HMAC-SHA1", oauth_timestamp="generated-timestamp",
  oauth_token="access-token-for-authed-user", oauth_version="1.0"'
 """
 
@@ -27,8 +27,7 @@ if __name__ == "__main__":
         encoded = base64.b64encode(authText.encode('ascii'))
 
         header = {}
-        textBasic = "Basic ".encode('ascii') + encoded
-        header['Authorization'] = textBasic
+        header['Authorization'] = 'Basic '.encode('ascii') + encoded
         header['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
         bodytext = 'grant_type=client_credentials'
 
@@ -38,14 +37,14 @@ if __name__ == "__main__":
         r = post(urlPost, data=param, headers=header)
         print(r.text)
         # r = get(baseURL_auth, params=param))
-        #rj = r.json()
-        #try:
+        # rj = r.json()
+        # try:
         #    print("rj: {}".format(rjson.text))
-            # id = rj['statuses']['id_str']
-            # tweetText = rj['statuses']['text']
-            # name = rj['statuses']['user']['name']
-            # print("[{}]] {} by {}".format(id, tweetText, name))
-        #except Exception as e:
+        #    id = rj['statuses']['id_str']
+        #     tweetText = rj['statuses']['text']
+        #     name = rj['statuses']['user']['name']
+        #     print("[{}]] {} by {}".format(id, tweetText, name))
+        # except Exception as e:
         #    print('None')
     else:
         print("Usage: ./101-search_twitter.py [API Key] [API Secret] [Search]")
