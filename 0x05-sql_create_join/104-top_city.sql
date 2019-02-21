@@ -1,5 +1,5 @@
 -- 104-top_city.sql - list top 3 cities' temperates during July / Aug
-SELECT city, AVG(value)
+SELECT city, AVG(value) as 'avg_temp'
 FROM temperatures
 WHERE month=7 OR month=8
 GROUP BY city
